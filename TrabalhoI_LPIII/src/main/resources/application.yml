@@ -2,7 +2,7 @@ spring:
   datasource:
      url: jdbc:mysql://localhost:3306/trabalhoI_lpIII
      username: root
-     password: alunoinfo
+     password: root
      
   jpa:
     hibernate:

@@ -1,13 +1,12 @@
 package br.com.ifsul.domain;
 
+import static jakarta.persistence.EnumType.STRING;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 import java.util.List;
 
 import br.com.ifsul.domain.enums.Sexo;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -24,6 +23,10 @@ public class Treinador {
     private Long id;
 	
 	private String nome;
-	
+
+	@Enumerated(STRING)
 	private Sexo sexo;
+
+	@OneToMany(mappedBy = "treinador")
+	private List<Pokemon> pokemons;
 }

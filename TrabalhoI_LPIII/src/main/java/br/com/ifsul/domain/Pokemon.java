@@ -1,13 +1,12 @@
 package br.com.ifsul.domain;
 
+import static jakarta.persistence.EnumType.STRING;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 import java.util.List;
 
 import br.com.ifsul.domain.enums.NomePokemon;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -22,7 +21,8 @@ public class Pokemon {
 	@Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
-	
+
+	@Enumerated(STRING)
 	private NomePokemon nome;
 	
 	private String apelido;
@@ -30,4 +30,8 @@ public class Pokemon {
 	private int level;
 	
 	private int experiencia;
+
+	@ManyToOne
+	@JoinColumn(name = "treinador_id")
+	private Treinador treinador;
 }

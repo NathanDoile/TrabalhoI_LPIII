@@ -3,6 +3,7 @@ package br.com.ifsul.domain;
 import static jakarta.persistence.EnumType.STRING;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import br.com.ifsul.domain.enums.NomePokemon;
@@ -31,7 +32,11 @@ public class Pokemon {
 	
 	private int experiencia;
 
+	private LocalDate dataCapturado;
+
 	@ManyToOne
 	@JoinColumn(name = "treinador_id")
 	private Treinador treinador;
+
+
 }

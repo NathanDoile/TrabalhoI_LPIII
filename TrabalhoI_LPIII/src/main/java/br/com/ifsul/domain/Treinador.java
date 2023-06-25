@@ -1,5 +1,6 @@
 package br.com.ifsul.domain;
 
+import static jakarta.persistence.CascadeType.PERSIST;
 import static jakarta.persistence.EnumType.STRING;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
@@ -27,6 +28,15 @@ public class Treinador {
 	@Enumerated(STRING)
 	private Sexo sexo;
 
-	@OneToMany(mappedBy = "treinador")
+	@OneToMany(mappedBy = "treinador", cascade = PERSIST)
 	private List<Pokemon> pokemons;
+
+	@Override
+	public String toString() {
+		return "Treinador{" +
+				"id=" + id +
+				", nome='" + nome + '\'' +
+				", sexo=" + sexo +
+				'}';
+	}
 }

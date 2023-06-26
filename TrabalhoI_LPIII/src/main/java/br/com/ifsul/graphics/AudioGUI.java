@@ -10,11 +10,20 @@ import static javax.sound.sampled.Clip.LOOP_CONTINUOUSLY;
 public abstract class AudioGUI {
 
     private static AudioInputStream music = null;
+    private static Clip clip;
+
+    static {
+        try {
+            clip = AudioSystem.getClip();
+        } catch (LineUnavailableException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     public static void iniciarMusica() {
         try {
             music = AudioSystem.getAudioInputStream(new File("src/main/java/br/com/ifsul/graphics/assets/music.wav"));
-            Clip clip = AudioSystem.getClip();
             clip.open(music);
             clip.loop(LOOP_CONTINUOUSLY);
             clip.start();
@@ -25,6 +34,12 @@ public abstract class AudioGUI {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    public static void ligarMusica() {
+        clip.start();
+    }
+    public static void pararMusica() {
+        clip.stop();
     }
 
 

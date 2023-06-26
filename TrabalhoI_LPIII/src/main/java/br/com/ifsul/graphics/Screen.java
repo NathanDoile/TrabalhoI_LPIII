@@ -51,6 +51,9 @@ public abstract class Screen {
        janela.add(getCriarTreinadorButton());
        janela.add(getListarTreinadoresButton());
        janela.add(getCapturarPokemonButton());
+       janela.add(getBatalhaPokemonButton());
+       janela.add(getLigarMusica());
+       janela.add(getPararMusica());
    }
 
 }

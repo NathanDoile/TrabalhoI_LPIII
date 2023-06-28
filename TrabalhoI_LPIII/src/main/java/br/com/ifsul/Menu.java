@@ -4,7 +4,7 @@ import br.com.ifsul.domain.Pokemon;
 import br.com.ifsul.domain.Treinador;
 import br.com.ifsul.domain.enums.NomePokemon;
 import br.com.ifsul.domain.enums.Sexo;
-import br.com.ifsul.graphics.Screen;
+import br.com.ifsul.graphics.menu.UIMenu;
 import br.com.ifsul.service.*;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,10 +36,8 @@ public class Menu {
     @Autowired
     private ListarTreinadoresService listarTreinadoresService;
 
-    @PostConstruct
     public void iniciarMenu() {
 
-        Screen.inicializar();
         boolean ativo = true;
 
         while(ativo) {

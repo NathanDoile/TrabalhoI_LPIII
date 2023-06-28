@@ -15,13 +15,16 @@ public class CriarPokemonService {
 
     @Transactional
     public Pokemon criarPokemon(NomePokemon nomePokemon) {
+    	
         Pokemon pokemon = Pokemon
                 .builder()
                 .nome(nomePokemon)
                 .level(nomePokemon.getNivel())
                 .experiencia(nomePokemon.getExp())
                 .build();
+        
         pokemonRepository.save(pokemon);
+        
         return pokemon;
     }
 

@@ -33,13 +33,13 @@ public class UIMenu extends JFrame{
        Image wallpaper = getWallpaper().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);;
        this.setContentPane(new JLabel(new ImageIcon(wallpaper)));
 
-       this.setVisible(true);
        this.add(getCriarTreinadorButton(service));
        this.add(getListarTreinadoresButton());
        this.add(getCapturarPokemonButton());
        this.add(getBatalhaPokemonButton());
        this.add(getLigarMusica());
        this.add(getPararMusica());
+       this.setVisible(true);
    }
 
 }

@@ -25,7 +25,7 @@ public class UIListarTreinadores extends JFrame{
 	       this.setBounds(500, 100, 800, 500);
 	       this.setResizable(false);
 	       this.setIconImage(icon);
-	       this.setTitle("PokeHub");
+	       this.setTitle("Listar Treinadores");
 
 	       Image wallpaper = ImageGUI.getListarTreinadoresWallpaper().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);;
 	       this.setContentPane(new JLabel(new ImageIcon(wallpaper)));

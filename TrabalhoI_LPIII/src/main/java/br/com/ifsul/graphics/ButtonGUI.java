@@ -7,7 +7,7 @@ import br.com.ifsul.service.ListarTreinadoresService;
 
 import java.awt.*;
 
-import static br.com.ifsul.graphics.AudioGUI.*;
+import static br.com.ifsul.graphics.MenuAudioGUI.*;
 
 public abstract class ButtonGUI {
 

@@ -26,7 +26,7 @@ public class UICriarTreinador extends JFrame{
 	       this.setBounds(500, 100, 800, 500);
 	       this.setResizable(false);
 	       this.setIconImage(icon);
-	       this.setTitle("PokeHub");
+	       this.setTitle("Criar Treinador");
 
 	       Image wallpaper = ImageGUI.getTreinadorWallpaper().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);;
 	       this.setContentPane(new JLabel(new ImageIcon(wallpaper)));

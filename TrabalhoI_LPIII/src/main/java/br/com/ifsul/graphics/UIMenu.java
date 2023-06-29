@@ -5,7 +5,7 @@ import javax.swing.*;
 import br.com.ifsul.service.CriarTreinadorService;
 import br.com.ifsul.service.ListarTreinadoresService;
 
-import static br.com.ifsul.graphics.AudioGUI.iniciarMusica;
+import static br.com.ifsul.graphics.MenuAudioGUI.iniciarMusica;
 import static br.com.ifsul.graphics.ButtonGUI.*;
 import static br.com.ifsul.graphics.ImageGUI.getIcon;
 import static br.com.ifsul.graphics.ImageGUI.getWallpaper;

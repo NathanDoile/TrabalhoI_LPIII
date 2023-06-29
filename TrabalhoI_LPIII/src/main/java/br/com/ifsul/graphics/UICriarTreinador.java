@@ -1,20 +1,8 @@
-package br.com.ifsul.graphics.criar_treinador;
+package br.com.ifsul.graphics;
 
-import static br.com.ifsul.domain.enums.Sexo.FEMININO;
 import static br.com.ifsul.domain.enums.Sexo.MASCULINO;
-import static br.com.ifsul.graphics.menu.AudioGUI.iniciarMusica;
-import static br.com.ifsul.graphics.menu.ButtonGUI.getBatalhaPokemonButton;
-import static br.com.ifsul.graphics.menu.ButtonGUI.getCapturarPokemonButton;
-import static br.com.ifsul.graphics.menu.ButtonGUI.getCriarTreinadorButton;
-import static br.com.ifsul.graphics.menu.ButtonGUI.getLigarMusica;
-import static br.com.ifsul.graphics.menu.ButtonGUI.getListarTreinadoresButton;
-import static br.com.ifsul.graphics.menu.ButtonGUI.getPararMusica;
-import static br.com.ifsul.graphics.menu.ImageGUI.getIcon;
-import static br.com.ifsul.graphics.menu.ImageGUI.getWallpaper;
-import static java.awt.Font.BOLD;
+import static br.com.ifsul.graphics.ImageGUI.getIcon;
 import static java.awt.Font.PLAIN;
-import static javax.swing.SwingConstants.CENTER;
-import static javax.swing.SwingConstants.LEFT;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -22,7 +10,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.*;
 
 import br.com.ifsul.domain.enums.Sexo;
-import br.com.ifsul.graphics.menu.ImageGUI;
+import br.com.ifsul.graphics.ImageGUI;
 import br.com.ifsul.service.CriarTreinadorService;
 
 public class UICriarTreinador extends JFrame{
@@ -45,18 +33,18 @@ public class UICriarTreinador extends JFrame{
 
 		JTextField nameField = new JTextField();
 		nameField.setBounds(325, 135, 200, 40);
-		nameField.setFont(new Font("Calibri", PLAIN, 18));
+		nameField.setFont(ImageGUI.getFont(0,24f));
 
 		JButton OKbutton = new JButton("OK");
 		OKbutton.setBounds(627, 395,93, 30);
-		OKbutton.setFont(new Font("Calibri", BOLD, 26));
+		OKbutton.setFont(ImageGUI.getFont(1,26f));
 		OKbutton.setBackground(new Color(222, 214, 89));
 		OKbutton.setForeground(new Color(255, 255, 255));
 		OKbutton.addActionListener(e -> criarTreinador(service,nameField));
 
 		JButton backButton = new JButton("VOLTAR");
 		backButton.setBounds(627, 323,93, 30);
-		backButton.setFont(new Font("Calibri", BOLD, 16));
+		backButton.setFont(ImageGUI.getFont(1,20f));
 		backButton.setBackground(new Color(222, 214, 89));
 		backButton.setForeground(new Color(255, 255, 255));
 		backButton.addActionListener(e -> voltar());
@@ -69,6 +57,7 @@ public class UICriarTreinador extends JFrame{
 		String[] sexos = {"MASCULINO","FEMININO"};
 		JComboBox sexoOption = new JComboBox(sexos);
 		sexoOption.setBounds(125, 150,125, 20);
+		sexoOption.setFont(ImageGUI.getFont(1,18f));
 		sexoOption.addActionListener(e -> selectSexo(sexoOption.getSelectedItem().toString(), sprite));
 
 		this.setVisible(true);

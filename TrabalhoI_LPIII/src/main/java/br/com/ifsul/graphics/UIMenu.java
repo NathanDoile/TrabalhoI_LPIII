@@ -1,24 +1,22 @@
-package br.com.ifsul.graphics.menu;
+package br.com.ifsul.graphics;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import br.com.ifsul.service.CriarTreinadorService;
+import br.com.ifsul.service.ListarTreinadoresService;
 
-import static br.com.ifsul.graphics.menu.AudioGUI.iniciarMusica;
-import static br.com.ifsul.graphics.menu.ButtonGUI.*;
-import static br.com.ifsul.graphics.menu.ImageGUI.getIcon;
-import static br.com.ifsul.graphics.menu.ImageGUI.getWallpaper;
+import static br.com.ifsul.graphics.AudioGUI.iniciarMusica;
+import static br.com.ifsul.graphics.ButtonGUI.*;
+import static br.com.ifsul.graphics.ImageGUI.getIcon;
+import static br.com.ifsul.graphics.ImageGUI.getWallpaper;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 @SuppressWarnings("serial")
 public class UIMenu extends JFrame{
 
-   public UIMenu(CriarTreinadorService service) {	
+   public UIMenu(CriarTreinadorService criarTreinadorService, ListarTreinadoresService listarTreinadores) {
 
        BufferedImage icon = getIcon();
        iniciarMusica();
@@ -33,8 +31,8 @@ public class UIMenu extends JFrame{
        Image wallpaper = getWallpaper().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);;
        this.setContentPane(new JLabel(new ImageIcon(wallpaper)));
 
-       this.add(getCriarTreinadorButton(service));
-       this.add(getListarTreinadoresButton());
+       this.add(getCriarTreinadorButton(criarTreinadorService));
+       this.add(getListarTreinadoresButton(listarTreinadores));
        this.add(getCapturarPokemonButton());
        this.add(getBatalhaPokemonButton());
        this.add(getLigarMusica());

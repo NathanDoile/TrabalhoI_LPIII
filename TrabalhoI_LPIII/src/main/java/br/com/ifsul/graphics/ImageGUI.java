@@ -1,4 +1,4 @@
-package br.com.ifsul.graphics.menu;
+package br.com.ifsul.graphics;
 
 import br.com.ifsul.domain.enums.Sexo;
 import org.hibernate.engine.jdbc.Size;
@@ -13,10 +13,10 @@ import static br.com.ifsul.domain.enums.Sexo.MASCULINO;
 
 public abstract class ImageGUI {
 
-    public static Font getFont(float size) {
+    public static Font getFont(int type, float size) {
         Font customFont = null;
         try {
-            customFont = Font.createFont(Font.TRUETYPE_FONT, new File("src/main/java/br/com/ifsul/graphics/assets/pokemon_pixel_font.ttf")).deriveFont(size);
+            customFont = Font.createFont(Font.TRUETYPE_FONT, new File("src/main/java/br/com/ifsul/graphics/assets/pokemon_pixel_font.ttf")).deriveFont(type,size);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(customFont);
         } catch (IOException e) {
@@ -52,6 +52,16 @@ public abstract class ImageGUI {
         BufferedImage wallpaper = null;
         try {
             wallpaper = ImageIO.read(new File("src/main/java/br/com/ifsul/graphics/assets/criar_treinador.png"));
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return wallpaper;
+    }
+
+    public static BufferedImage getListarTreinadoresWallpaper() {
+        BufferedImage wallpaper = null;
+        try {
+            wallpaper = ImageIO.read(new File("src/main/java/br/com/ifsul/graphics/assets/lista_treinadores.png"));
         }catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,4 +1,4 @@
-package br.com.ifsul.graphics.menu;
+package br.com.ifsul.graphics;
 
 import javax.sound.sampled.*;
 

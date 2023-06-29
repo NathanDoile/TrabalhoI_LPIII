@@ -1,6 +1,6 @@
-package br.com.ifsul.graphics.criar_treinador;
+package br.com.ifsul.graphics;
 
-import static br.com.ifsul.graphics.menu.ImageGUI.getIcon;
+import static br.com.ifsul.graphics.ImageGUI.getIcon;
 
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -9,8 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import br.com.ifsul.graphics.menu.ImageGUI;
-import br.com.ifsul.service.CriarTreinadorService;
+import br.com.ifsul.graphics.ImageGUI;
 
 public class UICapturar extends JFrame{
 	

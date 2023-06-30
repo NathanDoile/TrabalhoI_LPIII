@@ -10,10 +10,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class CriarPokemonService {
 
-    @Autowired
-    private PokemonRepository pokemonRepository;
-
-    @Transactional
     public Pokemon criarPokemon(NomePokemon nomePokemon) {
     	
         Pokemon pokemon = Pokemon
@@ -22,8 +18,6 @@ public class CriarPokemonService {
                 .level(nomePokemon.getNivel())
                 .experiencia(nomePokemon.getExp())
                 .build();
-        
-        pokemonRepository.save(pokemon);
         
         return pokemon;
     }

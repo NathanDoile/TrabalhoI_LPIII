@@ -35,42 +35,32 @@ public class Menu {
     @Autowired
     private ListarTreinadoresService listarTreinadoresService;
 
+    @Autowired
+    private BatalharPokemonsService batalharPokemonsService;
+
     @PostConstruct
     public void iniciarMenu() {
         boolean ativo = true;
 
         while(ativo) {
         	
-            System.out.printf(
+            System.out.print(
                     "===========================\n" +
                     "         M E N U\n" +
                     "===========================\n" +
                     "1. Criar Treinador\n" +
                     "2. Listar Treinadores\n" +
                     "3. Capturar Pokemon\n" +
-                    "8. Sair\n" +
-                            "");
-            
+                    "4. Batalhar\n" +
+                    "8. Sair\n");
+
             switch (sc.nextInt()) {
-                case 1:
-                    opcao1();
-                    break;
-                    
-                case 2:
-                    opcao2();
-                    break;
-                    
-                case 3:
-                    opcao3();
-                    break;
-                    
-                case 8:
-                    ativo = false;
-                    break;
-                    
-                default:
-                    System.out.println("Opção invalida! Tente novamente");
-                    break;
+                case 1 -> opcao1();
+                case 2 -> opcao2();
+                case 3 -> opcao3();
+                case 4 -> opcao4();
+                case 8 -> ativo = false;
+                default -> System.out.println("Opção invalida! Tente novamente");
             }
         }
     }
@@ -91,19 +81,15 @@ public class Menu {
         
         while(sexoLoop) {
             switch (sc.nextInt()) {
-            
-                case 1:
+                case 1 -> {
                     sexo = FEMININO;
                     sexoLoop = false;
-                    break;
-                    
-                case 2:
+                }
+                case 2 -> {
                     sexo = MASCULINO;
                     sexoLoop = false;
-                    break;
-                    
-                default:
-                    System.out.println("Opção inválida");
+                }
+                default -> System.out.println("Opção inválida");
             }
         }
         
@@ -122,35 +108,35 @@ public class Menu {
         System.out.println("Digite o ID do Treinador que você deseja usar:");
         int treinadorId = sc.nextInt();
         
-        Treinador treinador = buscarTreinadorService.porId(Long.valueOf(treinadorId));
+        Treinador treinador = buscarTreinadorService.porId((long) treinadorId);
 
         System.out.printf("%s entra na mata em busca de Pokémons.\n", treinador.getNome().toString());
         System.out.printf("Um %s selvagem apareceu!! Deseja capturá-lo?\n", pokemon.getNome());
         System.out.println("1. Sim");
         System.out.println("2. Não");
-        
+
         switch (sc.nextInt()) {
-        
-            case 1:
+            case 1 -> {
                 System.out.println("Parabéns! Você o capturou com sucesso!");
-                
                 System.out.printf("Escolha um apelido para seu %s\n", pokemon.getNome().toString());
                 sc.nextLine();
                 String apelido = sc.nextLine();
-                
                 capturarPokemonService.capturar(apelido, treinador, pokemon);
-                
                 System.out.printf("%s foi transportado para seu PC Pokemon!\n", apelido);
-                break;
-                
-            case 2:
-                System.out.println("Você escapou!");
-                break;
-                
-            default:
-                System.out.println("Opção invalida, o Pokemon fugiu...");
-                break;
+            }
+            case 2 -> System.out.println("Você escapou!");
+            default -> System.out.println("Opção invalida, o Pokemon fugiu...");
         }
+    }
+
+    private void opcao4(){
+
+        System.out.println("Digite o ID do Treinador que você deseja usar:");
+        int treinadorId = sc.nextInt();
+
+        Treinador treinador = buscarTreinadorService.porId((long) treinadorId);
+
+        batalharPokemonsService.batalhar(treinador);
     }
     
     private Pokemon sortearPokemon() {
@@ -160,8 +146,6 @@ public class Menu {
         
         NomePokemon nome = NomePokemon.values()[random.nextInt(pokemonsExistentes)];
         
-        Pokemon pokemon = criarPokemonService.criarPokemon(nome);
-        
-        return pokemon;
+        return criarPokemonService.criarPokemon(nome);
     }
 }

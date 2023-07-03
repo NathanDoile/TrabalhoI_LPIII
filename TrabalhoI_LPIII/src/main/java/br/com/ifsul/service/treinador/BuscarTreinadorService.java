@@ -1,11 +1,9 @@
-package br.com.ifsul.service;
+package br.com.ifsul.service.treinador;
 
 import br.com.ifsul.domain.Treinador;
 import br.com.ifsul.repository.TreinadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.net.http.HttpResponse;
 
 @Service
 public class BuscarTreinadorService {

@@ -1,4 +1,4 @@
-package br.com.ifsul.service;
+package br.com.ifsul.service.pokemon;
 
 import br.com.ifsul.domain.Pokemon;
 import br.com.ifsul.domain.enums.NomePokemon;

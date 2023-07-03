@@ -1,4 +1,4 @@
-package br.com.ifsul.service;
+package br.com.ifsul.service.treinador;
 
 import br.com.ifsul.domain.Treinador;
 import br.com.ifsul.domain.enums.Sexo;

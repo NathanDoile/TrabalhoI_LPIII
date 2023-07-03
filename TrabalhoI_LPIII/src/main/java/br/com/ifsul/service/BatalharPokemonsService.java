@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import jakarta.annotation.PostConstruct;
+import br.com.ifsul.service.pokemon.EvoluirPokemonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,15 +27,9 @@ public class BatalharPokemonsService {
 	private EvoluirPokemonService evoluirPokemonService;
 
 	@Transactional
-	public void batalhar(Treinador treinador) {
+	public Treinador batalhar(Pokemon pokemonTreinador, Pokemon pokemonAdversario) {
 
 		Random random = new Random();
-		
-		Treinador adversario = selecionaTreinador(treinador, random);
-
-		Pokemon pokemonTreinador = selecionaPokemon(treinador, random);
-
-		Pokemon pokemonAdversario = selecionaPokemon(adversario, random);
 
 		List<Pokemon> rodaDaSorte = new ArrayList<>();
 
@@ -49,26 +43,8 @@ public class BatalharPokemonsService {
 
 		Pokemon pokemonVitorioso = rodaDaSorte.get(random.nextInt(rodaDaSorte.size()));
 
-		Treinador treinadorVitorioso = treinadorRepository.findByPokemons(pokemonVitorioso);
-
 		evoluirPokemonService.evoluir(pokemonVitorioso, 5);
-	}
 
-	private Pokemon selecionaPokemon(Treinador treinador, Random random){
-
-		List<Pokemon> pokemons = pokemonRepository.findAllByTreinador(treinador);
-
-		Pokemon pokemon = pokemons.get(random.nextInt(pokemons.size()));
-
-		return pokemon;
-	}
-
-	private Treinador selecionaTreinador(Treinador treinador, Random random){
-
-		List<Treinador> treinadores = treinadorRepository.findAllByIdNotIn(List.of(treinador.getId()));
-
-		Treinador adversario = treinadores.get(random.nextInt(treinadores.size()));
-
-		return adversario;
+		return treinadorRepository.findByPokemons(pokemonVitorioso);
 	}
 }

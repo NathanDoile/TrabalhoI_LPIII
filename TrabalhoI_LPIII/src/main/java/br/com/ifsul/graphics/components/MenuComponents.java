@@ -17,7 +17,7 @@ public abstract class MenuComponents {
 
     public static JLabel getNameLabel(String name) {
         JLabel label = new JLabel(name);
-        label.setBounds(550, 40, 180, 40);
+        label.setBounds(550, 40, 250, 100);
         label.setFont(PokeHubAssets.getFont(0,42f));
         label.setForeground(new Color(0, 0, 0));
         return label;
@@ -46,7 +46,7 @@ public abstract class MenuComponents {
         button.setFont(PokeHubAssets.getFont(1,16f));
         button.setBackground(new Color(84, 145, 212));
         button.setForeground(new Color(255, 255, 255));
-        button.addActionListener(e -> new UICapturar());
+        button.addActionListener(e -> abrirCapturarPokemon());
         return button;
     }
 
@@ -93,5 +93,10 @@ public abstract class MenuComponents {
         TelaInicialAudio.ligarMusica();
         telaInicial.setVisible(true);
         telaAtual.setVisible(false);
+    }
+
+    private static void abrirCapturarPokemon() {
+        MenuAudio.pararMusica();
+        new UICapturar();
     }
 }

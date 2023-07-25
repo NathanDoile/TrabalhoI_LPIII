@@ -1,9 +1,7 @@
 package br.com.ifsul.graphics;
 
 import br.com.ifsul.graphics.assets.TelaInicialAssets;
-import br.com.ifsul.service.BuscarTreinadorService;
-import br.com.ifsul.service.CriarTreinadorService;
-import br.com.ifsul.service.ListarTreinadoresService;
+import br.com.ifsul.service.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +16,9 @@ public class UITelaInicial extends JFrame{
 
    public UITelaInicial(CriarTreinadorService criarTreinadorService,
                         ListarTreinadoresService listarTreinadoresService,
-                        BuscarTreinadorService buscarTreinadorService
+                        BuscarTreinadorService buscarTreinadorService,
+                        CriarPokemonService criarPokemonService,
+                        CapturarPokemonService capturarPokemonService
                         ) {
 
        BufferedImage icon = getIcon();

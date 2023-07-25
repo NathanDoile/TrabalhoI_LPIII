@@ -1,6 +1,6 @@
 spring:
   datasource:
-     url: jdbc:mysql://localhost:3306/trabalhoI_lpIII
+     url: jdbc:mysql://localhost:3306/trabalhoi_lpiii
      username: root
      password: root
      

@@ -34,22 +34,9 @@ public class Pokemon {
 
 	private LocalDate dataCapturado;
 
-	private int experienciaParaSubirLevel;
-
 	@ManyToOne
 	@JoinColumn(name = "treinador_id")
 	private Treinador treinador;
 
-	public void adicionarExperiencia(int experiencia){
-		this.experiencia += experiencia;
-	}
 
-	public void subirLevel(){
-		this.level++;
-		this.experienciaParaSubirLevel += 10;
-	}
-
-	public void evoluir(NomePokemon novoPokemon){
-		this.nome = novoPokemon;
-	}
 }

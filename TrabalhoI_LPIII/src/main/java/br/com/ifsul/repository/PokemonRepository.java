@@ -14,4 +14,6 @@ public interface PokemonRepository extends JpaRepository<Pokemon, Long> {
     Pokemon findByIdAndTreinador(long id, Treinador treinador);
 
     List<Pokemon> findByTreinadorId(Long id);
+
+    Pokemon findFirstByTreinadorId(Long id);
 }

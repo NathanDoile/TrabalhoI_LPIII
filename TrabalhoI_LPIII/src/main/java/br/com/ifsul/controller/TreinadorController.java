@@ -3,6 +3,7 @@ package br.com.ifsul.controller;
 import br.com.ifsul.service.pokemon.CapturarPokemonService;
 import br.com.ifsul.service.pokemon.CriarPokemonService;
 import br.com.ifsul.service.treinador.BuscarTreinadorService;
+import br.com.ifsul.service.treinador.BuscarTreinadoresSemTreinadorService;
 import br.com.ifsul.service.treinador.CriarTreinadorService;
 import br.com.ifsul.service.treinador.ListarTreinadoresService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,7 @@ public class TreinadorController {
     public CriarPokemonService criarPokemonService;
     @Autowired
     public CapturarPokemonService capturarPokemonService;
+    @Autowired
+    public BuscarTreinadoresSemTreinadorService buscarTreinadoresSemTreinadorService;
 
 }

@@ -1,8 +1,10 @@
 package br.com.ifsul.graphics.components;
 
 import br.com.ifsul.controller.PokemonController;
+import br.com.ifsul.controller.TreinadorController;
 import br.com.ifsul.domain.Treinador;
 import br.com.ifsul.domain.enums.Sexo;
+import br.com.ifsul.graphics.UIBatalhaPokemon;
 import br.com.ifsul.graphics.UICapturarPokemon;
 import br.com.ifsul.graphics.UIListarPokemon;
 import br.com.ifsul.graphics.assets.MenuAssets;
@@ -56,13 +58,15 @@ public abstract class MenuComponents {
         return button;
     }
 
-    public static JButton getBatalhaPokemonButton() {
+    public static JButton getBatalhaPokemonButton(Treinador treinador, PokemonController controller,
+                                                  TreinadorController treinadorController) {
         JButton button = new JButton("Batalha Pokemon");
         button.setBounds(25, 150, 180, 40);
         button.setFont(PokeHubAssets.getFont(1,16f));
         button.setBackground(new Color(84, 145, 212));
         button.setForeground(new Color(255, 255, 255));
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        button.addActionListener(e -> abrirBatalhaPokemon(treinador,controller,treinadorController));
         return button;
     }
 
@@ -110,6 +114,12 @@ public abstract class MenuComponents {
         new UICapturarPokemon(treinador, controller);
     }
 
+    private static void abrirBatalhaPokemon(Treinador treinador,
+                                            PokemonController pokemonController,
+                                            TreinadorController treinadorController) {
+        MenuAudio.pararMusica();
+        new UIBatalhaPokemon(treinador, pokemonController, treinadorController);
+    }
 
     private static void abrirVerPokemon(Treinador treinador, PokemonController controller) {
         new UIListarPokemon(controller, treinador);

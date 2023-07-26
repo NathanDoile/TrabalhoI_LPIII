@@ -57,6 +57,7 @@ public class Menu {
     @Autowired
     private BuscarTreinadoresSemTreinadorService buscarTreinadoresSemTreinadorService;
 
+    //@PostConstruct
     public void iniciarMenu() {
         boolean ativo = true;
 

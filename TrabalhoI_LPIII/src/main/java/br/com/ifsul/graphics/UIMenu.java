@@ -37,7 +37,7 @@ public class UIMenu extends JFrame{
        this.add(getSairButton(telaInicial, this));
        this.add(getVerPokemonsButton(treinador, controller));
        this.add(getSprite(treinador.getSexo()));
-       this.add(getBatalhaPokemonButton());
+       this.add(getBatalhaPokemonButton(treinador, controller, treinadorController));
        this.add(getCapturarPokemonButton(treinador, controller));
        this.add(getLigarMusica());
        this.add(getPararMusica());

@@ -16,4 +16,15 @@ public class BuscarPokemonService {
 
         return pokemonRepository.findByIdAndTreinador(pokemonId, treinador);
     }
+
+    public Pokemon porId(long pokemonId) {
+
+        return pokemonRepository.findById(pokemonId).get();
+    }
+
+    public Pokemon primeiro(Long id) {
+
+        return pokemonRepository.findFirstByTreinadorId(id);
+    }
+
 }

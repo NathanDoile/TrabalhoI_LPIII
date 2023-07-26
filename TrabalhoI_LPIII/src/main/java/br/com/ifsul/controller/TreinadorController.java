@@ -1,5 +1,6 @@
 package br.com.ifsul.controller;
 
+import br.com.ifsul.service.BatalharPokemonsService;
 import br.com.ifsul.service.pokemon.CapturarPokemonService;
 import br.com.ifsul.service.pokemon.CriarPokemonService;
 import br.com.ifsul.service.treinador.BuscarTreinadorService;
@@ -24,5 +25,7 @@ public class TreinadorController {
     public CapturarPokemonService capturarPokemonService;
     @Autowired
     public BuscarTreinadoresSemTreinadorService buscarTreinadoresSemTreinadorService;
+    @Autowired
+    public BatalharPokemonsService batalhaService;
 
 }

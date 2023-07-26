@@ -62,7 +62,13 @@ public class UIBatalhaPokemon extends JFrame{
 		this.add(aliadoLvl);
 		this.add(nomeAliado);
 		this.add(mensagem);
-		this.add(getBatalharButton());
+		this.add(getBatalharButton(
+	    		treinadorController,
+	    		this,
+	    		treinador,
+	    		pokemonAliado,
+	    		pokemonAdversario
+	    		));
 		this.add(getTrocarButton(
 				spriteAliado,
 				nomeAliado,

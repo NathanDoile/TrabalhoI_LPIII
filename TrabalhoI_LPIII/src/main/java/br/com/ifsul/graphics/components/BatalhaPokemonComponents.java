@@ -1,9 +1,11 @@
 package br.com.ifsul.graphics.components;
 
 import br.com.ifsul.controller.PokemonController;
+import br.com.ifsul.controller.TreinadorController;
 import br.com.ifsul.domain.Pokemon;
 import br.com.ifsul.domain.Treinador;
 import br.com.ifsul.graphics.UIEscolherPokemon;
+import br.com.ifsul.graphics.UIResultado;
 import br.com.ifsul.graphics.assets.BatalhaPokemonAssets;
 import br.com.ifsul.graphics.assets.CapturarPokemonAssets;
 import br.com.ifsul.graphics.assets.PokeHubAssets;
@@ -12,6 +14,7 @@ import br.com.ifsul.graphics.audio.MenuAudio;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
 public abstract class BatalhaPokemonComponents {
 
@@ -94,13 +97,26 @@ public abstract class BatalhaPokemonComponents {
         return button;
     }
 
-    public static JButton getBatalharButton() {
+    public static JButton getBatalharButton(
+    		TreinadorController treinadorController,
+    		JFrame telaBatalha,
+    		Treinador treinador,
+    		Pokemon pokemonTreinador,
+    		Pokemon pokemonAdversario
+    		) {
         JButton button = new JButton("BATALHAR");
         button.setBounds(450, 340, 150, 40);
         button.setFont(PokeHubAssets.getFont(1,24f));
         button.setBackground(new Color(255, 255, 255));
         button.setForeground(new Color(0, 0, 0));
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        button.addActionListener(e -> batalhar(
+        		treinadorController,
+        		telaBatalha,
+        		treinador,
+        		pokemonTreinador,
+        		pokemonAdversario
+        		));
         return button;
     }
 
@@ -150,7 +166,23 @@ public abstract class BatalhaPokemonComponents {
                 mensagem,
                 lvlAliado);
     }
-
+    
+    private static void batalhar(
+    		TreinadorController treinadorController,
+    		JFrame telaBatalha,
+    		Treinador treinador,
+    		Pokemon pokemonTreinador,
+    		Pokemon pokemonAdversario
+    		) {
+    	Treinador vencedor = treinadorController.batalhaService.batalhar(pokemonTreinador,pokemonAdversario);
+    	if(Objects.equals(vencedor.getId(), treinador.getId())) {
+        	new UIResultado("Voce venceu!!");
+    	} else {
+    		new UIResultado("Voce perdeu...");
+    	}
+    	BatalhaAudio.pararMusica();
+    	telaBatalha.setVisible(false);
+    }
 
 
     private static void fugir(JFrame tela) {

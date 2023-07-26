@@ -2,6 +2,7 @@ package br.com.ifsul;
 
 import br.com.ifsul.controller.PokemonController;
 import br.com.ifsul.controller.TreinadorController;
+import br.com.ifsul.graphics.UIResultado;
 import br.com.ifsul.graphics.UITelaInicial;
 import br.com.ifsul.service.pokemon.CapturarPokemonService;
 import br.com.ifsul.service.pokemon.CriarPokemonService;
@@ -40,7 +41,7 @@ public class TrabalhoILpiiiApplication {
 		sab.headless(false);
 		ConfigurableApplicationContext cac = sab.run(args);
 		TrabalhoILpiiiApplication ms = cac.getBean(TrabalhoILpiiiApplication.class);
-
+		
 		new UITelaInicial(
 				ms.treinadorController,
 				ms.pokemonController);

@@ -4,7 +4,7 @@ import br.com.ifsul.domain.Pokemon;
 import br.com.ifsul.domain.Treinador;
 import br.com.ifsul.domain.enums.NomePokemon;
 import br.com.ifsul.domain.enums.Sexo;
-import br.com.ifsul.service.*;
+import br.com.ifsul.service.BatalharPokemonsService;
 import br.com.ifsul.service.pokemon.BuscarPokemonService;
 import br.com.ifsul.service.pokemon.BuscarPokemonsTreinadorService;
 import br.com.ifsul.service.pokemon.CapturarPokemonService;
@@ -13,7 +13,6 @@ import br.com.ifsul.service.treinador.BuscarTreinadorService;
 import br.com.ifsul.service.treinador.BuscarTreinadoresSemTreinadorService;
 import br.com.ifsul.service.treinador.CriarTreinadorService;
 import br.com.ifsul.service.treinador.ListarTreinadoresService;
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -58,7 +57,7 @@ public class Menu {
     @Autowired
     private BuscarTreinadoresSemTreinadorService buscarTreinadoresSemTreinadorService;
 
-    @PostConstruct
+    //@PostConstruct
     public void iniciarMenu() {
         boolean ativo = true;
 

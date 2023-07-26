@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="02ccee48-df89-4fac-8635-2cbf1ba7c043" name="Changes" comment="merge" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2RhyTvO47RqE2stDyqQvJkHYZcJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ruann/Desktop/Escola/LP/TrabalhoI_LPIII/TrabalhoI_LPIII/TrabalhoI_LPIII/pom.xml",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ruann\Desktop\Escola\LP\TrabalhoI_LPIII\TrabalhoI_LPIII\src\main\java\br\com\ifsul\graphics\criar_treinador" />
+      <recent name="C:\Users\ruann\Desktop\Escola\LP\TrabalhoI_LPIII\TrabalhoI_LPIII\src\main\java\br\com\ifsul\graphics\menu" />
+      <recent name="C:\Users\ruann\Desktop\Escola\LP\TrabalhoI_LPIII\TrabalhoI_LPIII\src\main\java\br\com\ifsul\graphics" />
+      <recent name="C:\Users\ruann\Desktop\Escola\LP\TrabalhoI_LPIII\TrabalhoI_LPIII\src\main\java\br\com\ifsul\graphics\criar" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ruann\Desktop\Escola\LP\TrabalhoI_LPIII\TrabalhoI_LPIII\src\main\java\br\com\ifsul\graphics\assets\image" />
+      <recent name="C:\Users\ruann\Desktop\Escola\LP\TrabalhoI_LPIII\TrabalhoI_LPIII\src\main\java\br\com\ifsul\graphics\assets\font" />
+      <recent name="C:\Users\ruann\Desktop\Escola\LP\TrabalhoI_LPIII\TrabalhoI_LPIII\src\main\java\br\com\ifsul\graphics\assets\music" />
+      <recent name="C:\Users\ruann\Desktop\Escola\LP\TrabalhoI_LPIII\TrabalhoI_LPIII\src\main\java\br\com\ifsul\graphics\img" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.ifsul" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.ifsul.graphics.components" />
+      <recent name="br.com.ifsul.graphics.assets" />
+      <recent name="br.com.ifsul.graphics.audio" />
+      <recent name="br.com.ifsul.graphics" />
+      <recent name="br.com.ifsul.graphics.image" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TrabalhoILpiiiApplication">
+    <configuration name="MenuScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.ifsul.graphics.menu.MenuScreen" />
+      <module name="TrabalhoI_LPIII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.ifsul.graphics.audio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrabalhoILpiiiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.ifsul.TrabalhoILpiiiApplication" />
+      <module name="TrabalhoI_LPIII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.ifsul.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="br.com.ifsul.gui.Screen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.ifsul.gui.Screen" />
+      <module name="TrabalhoI_LPIII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.ifsul.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TrabalhoILpiiiApplication" />
+        <item itemvalue="Application.MenuScreen" />
+        <item itemvalue="Application.br.com.ifsul.gui.Screen" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02ccee48-df89-4fac-8635-2cbf1ba7c043" name="Changes" comment="" />
+      <created>1687716712386</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687716712386</updated>
+    </task>
+    <task id="LOCAL-00001" summary="merge">
+      <option name="closed" value="true" />
+      <created>1690254618553</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690254618553</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+  </component>
+</project>
